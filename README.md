@@ -1,7 +1,7 @@
 
 # Student Performance Predictor
 
-This project predicts a student's future grade and trend based on their past academic performance. It uses a machine learning model trained on student performance data and provides an easy-to-use interface through a Flask API and a Streamlit frontend.
+This project predicts a student's future grade and trend based on their past academic performance. It uses a machine learning model trained on student performance data and provides an easy-to-use interface through a Flask API.
 
 ---
 
@@ -14,25 +14,21 @@ This project predicts a student's future grade and trend based on their past aca
     - [Data Preparation](#data-preparation)
     - [Model Training](#model-training)
     - [API Development](#api-development)
-    - [Frontend Development](#frontend-development)
 - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Installation Steps](#installation-steps)
 - [How to Run the Application](#how-to-run-the-application)
   - [Run the Flask API](#run-the-flask-api)
-  - [Run the Streamlit Frontend](#run-the-streamlit-frontend)
 - [Input and Output](#input-and-output)
   - [API Input Format](#api-input-format)
   - [API Output Format](#api-output-format)
-  - [Streamlit Frontend](#streamlit-frontend)
 - [File Structure](#file-structure)
-- [Future Enhancements](#future-enhancements)
 
 ---
 
 ## Introduction
 
-The **Student Performance Predictor** leverages machine learning to predict a student's future grade (G3) and assess their performance trend (improving, declining, or steady) based on past academic data. It offers an intuitive interface for users through a Streamlit app and exposes an API for programmatic interaction.
+The **Student Performance Predictor** leverages machine learning to predict a student's future grade (G3) and assess their performance trend (improving, declining, or steady) based on past academic data.
 
 ---
 
@@ -63,10 +59,6 @@ Additionally, the model evaluates the performance trend based on grade progressi
 #### API Development
 1. Built a Flask API to serve the trained model.
 2. Implemented a POST endpoint (`/predict`) to accept input data in JSON format and return predictions (grade and trend).
-
-#### Frontend Development
-1. Created a Streamlit app to provide a user-friendly interface for interacting with the API.
-2. Users can input data, send it to the API, and view the predicted grade and trend.
 
 ---
 
@@ -108,15 +100,6 @@ Start the API server:
 python app.py
 ```
 The API will be accessible at `http://127.0.0.1:5000`.
-
-### Run the Streamlit Frontend
-
-In a new terminal, start the Streamlit app:
-```bash
-streamlit run streamlit_app.py
-```
-The Streamlit app will open in your browser at `http://localhost:8501`.
-
 ---
 
 ## Input and Output
@@ -158,31 +141,6 @@ The API responds with the predicted grade and performance trend:
 |-------------------|---------------------------------------------------|---------------|
 | `predicted_grade` | Predicted final grade (G3)                        | 14.75         |
 | `trend`           | Performance trend (improving, declining, or steady) | improving     |
-
-### Streamlit Frontend
-
-- **Input Fields**: Users provide values for:
-  - G1, G2, Study Time, Failures, and Absences.
-- **Output**:
-  - Predicted Grade
-  - Performance Trend
-
-#### Example
-
-**Input:**
-```yaml
-G1: 10
-G2: 12
-Study Time: 3
-Failures: 0
-Absences: 5
-```
-
-**Output:**
-```yaml
-Predicted Grade: 14.75
-Trend: Improving
-```
 
 ---
 
