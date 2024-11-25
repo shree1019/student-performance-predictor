@@ -69,7 +69,7 @@ Additionally, the model evaluates the performance trend based on grade progressi
 - Python 3.8 or higher
 - Required Python libraries:
   ```bash
-  pip install flask requests numpy pandas scikit-learn joblib
+  pip install -r requirements.txt
   ```
 
 ### Installation Steps
